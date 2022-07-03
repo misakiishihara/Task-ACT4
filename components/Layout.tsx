@@ -21,10 +21,10 @@ export const Layout: FC<Title> = ({ children, title = 'Task ACT4' }) => {
         <a 
             href='https://github.com/misakiishihara/Task-ACT4' 
             target='_blank'
-            className='mt-6 flex justify-center z-10 absolute text-white' 
+            className='mt-10 flex justify-center  text-white' 
             rel="noreferrer"
         >
-            <GitHubIcon />
+            <GitHubIcon className='w-10 h-10'/>
         </a>
         </header>
         <main

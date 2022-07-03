@@ -32,7 +32,7 @@ const Auth: NextPage = () => {
               type="text"
               required
               className='
-                my-2 rounded border border-gray-300
+                my-2 rounded border border-gray-300 px-3 py-2 focus:outline-none
               '
               placeholder='email'
               value={email}
@@ -44,13 +44,33 @@ const Auth: NextPage = () => {
               type="password"
               required
               className='
-                my-2 rounded border border-gray-300
+                my-2 rounded border border-gray-300 px-3 py-2 focus:outline-none
               '
               placeholder='password'
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
+          <div className='my-6 flex items-center justify-center text-sm'>
+            <span
+              onClick={() => setIsLogin(!isLogin)}
+              className="cursor-pointer font-medium hover:text-indigo-600"
+            >
+              change mode ??
+            </span>
+          </div>
+          <button
+            type='submit'
+            className='
+            group relative flex w-full justify-center rounded-md bg-indigo-600
+            py-2 px-4 text-sm font-medium text-white hover:bg-indigo-600
+            '
+          >
+            <span>
+              <BadgeCheckIcon className='h-5 w-5'/>
+            </span>
+              {isLogin ? 'Login' : 'Register'}
+          </button>
         </form>
       </Layout>
     )

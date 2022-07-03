@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
 import { supabase } from '../utils/supabase'
 
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -37,10 +38,12 @@ function MyApp({ Component, pageProps }: AppProps) {
     validateSession()
   },[])
   return (
+    <div className='bg-gray-800'>
     <QueryClientProvider client={queryClient}>
       <Component {...pageProps}/>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
+    </div>
   )
 }
 

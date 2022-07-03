@@ -1,6 +1,8 @@
 import { FC, ReactNode } from "react"
 import Head from "next/head"
 import { BadgeCheckIcon } from '@heroicons/react/solid'
+import GitHubIcon from '@mui/icons-material/GitHub';
+
 type Title = {
     title: string;
     children: ReactNode;
@@ -15,7 +17,16 @@ export const Layout: FC<Title> = ({ children, title = 'Task ACT4' }) => {
         <Head>
             <title>{title}</title>
         </Head>
-        <header></header>
+        <header>
+        <a 
+            href='https://github.com/misakiishihara/Task-ACT4' 
+            target='_blank'
+            className='mt-6 flex justify-center z-10 absolute text-white' 
+            rel="noreferrer"
+        >
+            <GitHubIcon />
+        </a>
+        </header>
         <main
             className="flex w-screen flex-1 flex-col items-center justify-center"
         >

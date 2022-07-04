@@ -51,12 +51,12 @@ const Auth: NextPage = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <div className='my-6 flex items-center justify-center text-sm'>
+          <div className='my-6 flex items-center text-teal-100 justify-center text-sm'>
             <span
               onClick={() => setIsLogin(!isLogin)}
               className="cursor-pointer font-medium hover:text-indigo-600"
             >
-              change mode ??
+              Switch to Login / Register 
             </span>
           </div>
           <button

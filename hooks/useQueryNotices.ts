@@ -9,7 +9,7 @@ export const useQueryNotices = () => {
         const { data, error } = await supabase
         .from('notices')
         .select('*')
-        .order('createdAt', {ascending: true})
+        .order('created_at', {ascending: true})
 
         if (error) {
             throw new Error(error.message)

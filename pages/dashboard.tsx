@@ -1,4 +1,5 @@
 import { NextPage } from "next"
+import { useQueryClient } from "react-query"
 import { 
     LogoutIcon,
     StatusOnlineIcon,
@@ -12,6 +13,11 @@ import { NoticeForm } from "../components/NoticeForm"
 import { NoticeList } from "../components/NoticeList"
 
 const Dashbord: NextPage = () => {
+    //キャッシュの削除
+    const queryClient = useQueryClient()
+    queryClient.removeQueries('tasks')
+    queryClient.removeQueries('notices')
+
     //サインアウト
     const signOut = () => {
         supabase.auth.signOut()
